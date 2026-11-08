@@ -1,0 +1,4 @@
+# Fotos originais em alta resolução (o site usa as versões .jpg)
+foto*.png
+# Arquivo vazio criado por engano
+index,html

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jovana vai tirar 900 no ENEM 🔬</title>
+<!-- Prévia bonitinha quando o link for mandado no WhatsApp -->
+<meta property="og:title" content="JOVANA VAI TIRAR 900 NO ENEM">
+<meta property="og:description" content="Isso não é uma previsão, é um FATO científico 🔬">
+<meta name="theme-color" content="#7b2ff7">
+
+<!-- Fontes do Google: Bangers (títulos) + Nunito (texto) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   CORES (mudam todas de uma vez no "MODO 1000" dourado)
+   ========================================================= */
+:root {
+  --amarelo: #ffd23f;
+  --rosa: #ff4fa3;
+  --roxo: #7b2ff7;
+  --azul: #2fb8ff;
+  --verde: #3ddc84;
+  --tinta: #2a1450;       /* cor do texto escuro */
+  --papel: #fffdf6;       /* cor dos cards */
+  --sombra: 6px 6px 0 var(--tinta);
+}
+
+/* MODO 1000: tudo vira dourado ✨ */
+body.modo-1000 {
+  --amarelo: #ffe680;
+  --rosa: #f5b700;
+  --roxo: #b8860b;
+  --azul: #ffd700;
+  --verde: #e6b422;
+  --tinta: #4a3200;
+  --papel: #fff8dc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--tinta);
+  overflow-x: hidden;
+  background: var(--roxo);
+  min-height: 100vh;
+  transition: color .6s;
+}
+/* Fundo animado: uma camada gigante com gradiente que só "desliza" (transform).
+   Mover com transform é bem mais leve pro celular do que animar o background direto. */
+body::before {
+  content: ""; position: fixed; z-index: -1;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: linear-gradient(-45deg, var(--rosa), var(--roxo), var(--azul), var(--amarelo), var(--rosa));
+  animation: fundoDancando 24s ease-in-out infinite alternate;
+  will-change: transform;
+  pointer-events: none;
+}
+@keyframes fundoDancando {
+  from { transform: translate(-12%, -12%); }
+  to   { transform: translate(12%, 12%); }
+}
+
+/* Emojis flutuando no fundo (decoração) */
+.emojis-fundo { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.emojis-fundo span {
+  position: absolute; font-size: 2rem; opacity: .35;
+  animation: flutuar 9s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50%      { transform: translateY(-30px) rotate(8deg); }
+}
+
+/* Canvas do confete: fica por cima de tudo, mas não bloqueia cliques */
+#confete { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+
+main { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 0 16px 40px; }
+
+/* =========================================================
+   CONTAGEM REGRESSIVA (barra fixa no topo)
+   ========================================================= */
+.contagem {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--tinta); color: var(--amarelo);
+  text-align: center; padding: 10px 12px;
+  font-weight: 900; font-size: .95rem;
+  box-shadow: 0 4px 0 rgba(0,0,0,.2);
+  transition: background .6s, color .6s;
+}
+.contagem .blocos { display: inline-flex; gap: 6px; margin-left: 6px; flex-wrap: wrap; justify-content: center; }
+.contagem .bloco {
+  background: var(--rosa); color: #fff; border-radius: 8px;
+  padding: 2px 8px; min-width: 52px; display: inline-block;
+}
+
+/* =========================================================
+   ELEMENTOS COMUNS
+   ========================================================= */
+section { margin-top: 70px; }
+
+h2 {
+  font-family: 'Bangers', cursive; letter-spacing: 2px;
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  color: #fff; text-align: center; line-height: 1.05;
+  text-shadow: 3px 3px 0 var(--tinta), -1px -1px 0 var(--tinta), 1px -1px 0 var(--tinta), -1px 1px 0 var(--tinta);
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--papel); border: 3px solid var(--tinta);
+  border-radius: 20px; box-shadow: var(--sombra);
+  padding: 24px; transition: background .6s, border-color .6s;
+}
+
+/* Botão divertido que pula */
+.botao {
+  font-family: 'Bangers', cursive; letter-spacing: 1.5px;
+  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  background: var(--amarelo); color: var(--tinta);
+  border: 3px solid var(--tinta); border-radius: 999px;
+  padding: 14px 28px; cursor: pointer;
+  box-shadow: 4px 4px 0 var(--tinta);
+  transition: transform .15s, box-shadow .15s, background .6s;
+  animation: pulinho 2.4s ease-in-out infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+.botao:hover { transform: translateY(-4px) rotate(-2deg) scale(1.05); }
+.botao:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--tinta); animation: none; }
+.botao.rosa { background: var(--rosa); color: #fff; }
+.botao:disabled { opacity: .6; cursor: wait; animation: none; }
+@keyframes pulinho {
+  0%, 80%, 100% { transform: translateY(0); }
+  88% { transform: translateY(-8px); }
+  94% { transform: translateY(0); }
+}
+
+/* Aparecer suave ao rolar a página */
+.revelar { opacity: 0; transform: translateY(40px); transition: opacity .7s, transform .7s; }
+.revelar.visivel { opacity: 1; transform: none; }
+
+/* =========================================================
+   1. ABERTURA
+   ========================================================= */
+.hero { text-align: center; padding-top: 50px; margin-top: 0; }
+.selo-fa {
+  display: inline-block; background: var(--papel); border: 3px solid var(--tinta);
+  border-radius: 999px; padding: 6px 16px; font-weight: 900; font-size: .9rem;
+  box-shadow: 3px 3px 0 var(--tinta); transform: rotate(-3deg);
+  animation: flutuar 5s ease-in-out infinite;
+}
+.titulo {
+  font-family: 'Bangers', cursive; letter-spacing: 3px;
+  font-size: clamp(3rem, 13vw, 7.5rem); line-height: .95;
+  color: #fff; margin: 24px 0 18px;
+  text-shadow: 5px 5px 0 var(--tinta), -2px -2px 0 var(--tinta), 2px -2px 0 var(--tinta), -2px 2px 0 var(--tinta);
+  cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
+}
+.titulo .num {
+  display: inline-block; color: var(--amarelo);
+  font-size: 1.35em; min-width: 2.2ch;
+  animation: numeroPulsando 1.2s ease-in-out infinite;
+}
+@keyframes numeroPulsando {
+  0%, 100% { transform: scale(1) rotate(-3deg); }
+  50%      { transform: scale(1.1) rotate(3deg); }
+}
+.titulo.tremeu { animation: tremer .3s; }
+@keyframes tremer {
+  25% { transform: translateX(-6px) rotate(-1deg); }
+  75% { transform: translateX(6px) rotate(1deg); }
+}
+.subtitulo {
+  display: inline-block; background: var(--tinta); color: #fff;
+  font-weight: 900; font-size: clamp(1.05rem, 4vw, 1.4rem);
+  padding: 10px 18px; border-radius: 14px; transform: rotate(1deg);
+}
+.seta { display: block; font-size: 2.4rem; margin-top: 30px; animation: flutuar 2s ease-in-out infinite; text-decoration: none; }
+
+/* =========================================================
+   2. RELATÓRIO OFICIAL
+   ========================================================= */
+.laudo { position: relative; max-width: 720px; margin: 0 auto; overflow: hidden;
+  background-image: repeating-linear-gradient(var(--papel) 0 31px, rgba(47,184,255,.18) 31px 32px); }
+.laudo-topo { text-align: center; border-bottom: 3px dashed var(--tinta); padding-bottom: 14px; margin-bottom: 14px; }
+.laudo-topo .logo { font-size: 2.6rem; }
+.laudo-topo strong { display: block; font-family: 'Bangers', cursive; letter-spacing: 1.5px; font-size: 1.5rem; }
+.laudo-topo small { font-size: .8rem; opacity: .75; }
+.laudo-linha {
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding: 10px 0; border-bottom: 1px dotted rgba(42,20,80,.35);
+}
+.laudo-linha span:first-child { font-weight: 700; }
+.laudo-linha span:last-child { font-weight: 900; color: var(--roxo); text-align: right; flex: 1 1 200px; }
+.laudo-assinatura { margin-top: 18px; font-size: .85rem; font-style: italic; }
+
+/* Carimbo APROVADO que "bate" na tela */
+.carimbo {
+  position: absolute; right: 6%; bottom: 14%;
+  font-family: 'Bangers', cursive; font-size: clamp(2.2rem, 9vw, 3.8rem); letter-spacing: 3px;
+  color: #e0193f; border: 6px double #e0193f; border-radius: 12px;
+  padding: 2px 16px; transform: rotate(-14deg) scale(4); opacity: 0;
+  pointer-events: none;
+}
+.carimbo.bateu { animation: carimbar .45s cubic-bezier(.2,1.6,.4,1) forwards; }
+@keyframes carimbar {
+  0%   { transform: rotate(-14deg) scale(4); opacity: 0; }
+  60%  { transform: rotate(-14deg) scale(.9); opacity: .9; }
+  100% { transform: rotate(-14deg) scale(1); opacity: .85; }
+}
+.laudo.sacudiu { animation: tremer .25s 2; }
+
+/* =========================================================
+   3. GALERIA POLAROID
+   ========================================================= */
+.galeria {
+  display: grid; gap: 30px 22px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.polaroid {
+  background: #fff; padding: 12px 12px 16px; border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  transform: rotate(var(--giro, -3deg));
+  transition: transform .35s cubic-bezier(.2,1.4,.4,1), box-shadow .35s;
+  cursor: pointer; position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Fitinha adesiva no topo */
+.polaroid::before {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 26px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgba(255,210,63,.75); border: 1px solid rgba(0,0,0,.08);
+}
+.polaroid:hover, .polaroid:focus-visible, .polaroid.ativa {
+  transform: rotate(0) scale(1.08); z-index: 5;
+  box-shadow: 0 20px 40px rgba(0,0,0,.35); outline: none;
+}
+.polaroid .moldura { aspect-ratio: 1 / 1; overflow: hidden; background: #eee; }
+.polaroid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Caso a foto não exista ainda: vira um quadro "confidencial" divertido */
+.polaroid .sem-foto {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; gap: 6px;
+  background: repeating-linear-gradient(45deg, var(--amarelo) 0 14px, #ffe98a 14px 28px);
+  font-weight: 900; padding: 12px;
+}
+.polaroid .sem-foto b { font-size: 3rem; }
+.polaroid p {
+  font-family: 'Bangers', cursive; letter-spacing: 1px; font-size: 1.25rem;
+  text-align: center; margin-top: 12px; line-height: 1.15; color: #333;
+}
+
+/* =========================================================
+   4. SIMULADOR DE NOTA
+   ========================================================= */
+.simulador { text-align: center; max-width: 620px; margin: 0 auto; }
+.barra { height: 30px; border: 3px solid var(--tinta); border-radius: 999px; overflow: hidden; background: #fff; margin: 22px 0 12px; display: none; }
+.barra.on { display: block; }
+.barra-recheio {
+  height: 100%; width: 0%;
+  background: repeating-linear-gradient(45deg, var(--rosa) 0 16px, var(--amarelo) 16px 32px);
+  background-size: 45px 45px; animation: listras .6s linear infinite;
+  transition: width .25s;
+}
+@keyframes listras { to { background-position: 45px 0; } }
+.msg-carregando { font-weight: 900; min-height: 1.5em; }
+.resultado {
+  font-family: 'Bangers', cursive; letter-spacing: 2px;
+  font-size: clamp(3.5rem, 18vw, 7rem); color: var(--roxo);
+  line-height: 1; margin: 10px 0; min-height: 0;
+}
+.resultado.erro { font-size: clamp(1.8rem, 8vw, 3.2rem); color: #e0193f; animation: tremer .3s 3; }
+.resultado.pop { animation: pop .5s cubic-bezier(.2,1.8,.4,1); }
+@keyframes pop { from { transform: scale(0) rotate(-20deg); } to { transform: scale(1) rotate(0); } }
+.comentario { font-weight: 700; margin-bottom: 16px; min-height: 1.4em; }
+
+/* =========================================================
+   5. KIT DE SOBREVIVÊNCIA
+   ========================================================= */
+.kit { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.dica { transition: transform .2s; padding: 20px; }
+.dica:hover { transform: translateY(-6px) rotate(-1deg); }
+.dica .ico { font-size: 2.4rem; display: inline-block; animation: flutuar 4s ease-in-out infinite; }
+.dica h3 { font-family: 'Bangers', cursive; letter-spacing: 1px; font-size: 1.5rem; margin: 6px 0 4px; }
+.dica:nth-child(3n+1) { border-top: 10px solid var(--rosa); }
+.dica:nth-child(3n+2) { border-top: 10px solid var(--azul); }
+.dica:nth-child(3n)   { border-top: 10px solid var(--amarelo); }
+
+/* =========================================================
+   6. BOTÃO DO NERVOSO + POPUP
+   ========================================================= */
+.nervoso { text-align: center; }
+.popup-fundo {
+  position: fixed; inset: 0; z-index: 200; background: rgba(42,20,80,.6);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+  opacity: 0; pointer-events: none; transition: opacity .25s;
+}
+.popup-fundo.aberto { opacity: 1; pointer-events: auto; }
+.popup {
+  max-width: 440px; width: 100%; text-align: center; transform: scale(.6) rotate(-6deg);
+  transition: transform .35s cubic-bezier(.2,1.6,.4,1);
+}
+.popup-fundo.aberto .popup { transform: scale(1) rotate(0); }
+.popup .grande { font-size: 3.2rem; }
+.popup .frase { font-family: 'Bangers', cursive; letter-spacing: 1.5px; font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 10px 0 20px; line-height: 1.15; }
+.popup .acoes { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.popup .botao { font-size: 1.2rem; padding: 10px 20px; animation: none; }
+
+/* =========================================================
+   7. MENSAGEM FINAL
+   ========================================================= */
+.final { text-align: center; max-width: 680px; margin: 0 auto; font-size: 1.12rem; line-height: 1.65; }
+.final p + p { margin-top: 14px; }
+.final .coracao { font-size: 3rem; display: inline-block; animation: batida 1s ease-in-out infinite; }
+@keyframes batida { 0%,100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } 45% { transform: scale(1.15); } }
+.final .tchau { font-family: 'Bangers', cursive; letter-spacing: 2px; font-size: clamp(1.9rem, 7vw, 2.6rem); color: var(--rosa); margin: 20px 0; line-height: 1.1; }
+.final .tchau small { display: block; font-size: .6em; color: var(--tinta); }
+
+footer { text-align: center; color: #fff; font-weight: 900; padding: 30px 16px 40px; position: relative; z-index: 1; text-shadow: 2px 2px 0 var(--tinta); }
+
+/* Aviso "MODO 1000 ATIVADO" */
+.aviso-1000 {
+  position: fixed; left: 50%; top: 50%; z-index: 300;
+  transform: translate(-50%, -50%) scale(0);
+  font-family: 'Bangers', cursive; letter-spacing: 3px; text-align: center;
+  font-size: clamp(2.4rem, 11vw, 5rem); color: #fff8dc; white-space: nowrap;
+  background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
+  border: 4px solid #4a3200; border-radius: 20px; padding: 10px 26px;
+  box-shadow: 0 0 60px #ffd700; text-shadow: 3px 3px 0 #4a3200;
+  pointer-events: none;
+}
+.aviso-1000.show { animation: aviso 2.6s cubic-bezier(.2,1.6,.4,1) forwards; }
+@keyframes aviso {
+  0%   { transform: translate(-50%, -50%) scale(0) rotate(-20deg); opacity: 1; }
+  20%  { transform: translate(-50%, -50%) scale(1) rotate(-4deg); }
+  80%  { transform: translate(-50%, -50%) scale(1) rotate(-4deg); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.3) rotate(-4deg); opacity: 0; }
+}
+body.modo-1000 .titulo, body.modo-1000 h2 { text-shadow: 3px 3px 0 #4a3200, 0 0 30px #ffd700; }
+
+/* =========================================================
+   TELA DE ENTRADA SECRETA
+   ========================================================= */
+body.trancado { overflow: hidden; }
+.portao {
+  position: fixed; inset: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+  background: radial-gradient(circle at 50% 40%, var(--roxo), var(--tinta));
+  transition: opacity .6s, transform .6s;
+}
+.portao.abrindo { opacity: 0; transform: scale(1.4); pointer-events: none; }
+.portao .card { max-width: 420px; width: 100%; text-align: center; animation: flutuar 4s ease-in-out infinite; }
+.portao .cadeado { font-size: 4rem; display: inline-block; }
+.portao .cadeado.abriu { animation: pop .5s cubic-bezier(.2,1.8,.4,1); }
+
+/* =========================================================
+   PASSAGEM PRA AGRONOMIA EM MACHADO
+   ========================================================= */
+.passagem {
+  max-width: 720px; margin: 0 auto; display: flex; padding: 0; overflow: hidden;
+  background: linear-gradient(135deg, #f3ffe8, var(--papel));
+}
+.passagem .corpo { flex: 1; padding: 22px; }
+.passagem .canhoto {
+  width: 150px; border-left: 3px dashed var(--tinta); padding: 22px 14px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  background: var(--verde); color: var(--tinta); font-weight: 900;
+}
+.passagem .canhoto b { font-family: 'Bangers', cursive; font-size: 3rem; line-height: 1; letter-spacing: 1px; }
+.passagem .topo { font-family: 'Bangers', cursive; letter-spacing: 1.5px; font-size: 1.4rem; color: #2f8f3a; }
+.passagem .rota { display: flex; align-items: center; gap: 12px; margin: 12px 0 16px; flex-wrap: wrap; }
+.passagem .rota strong { font-family: 'Bangers', cursive; font-size: clamp(1.6rem, 6vw, 2.3rem); letter-spacing: 1px; line-height: 1; }
+.passagem .rota small { display: block; font-size: .8rem; font-weight: 700; opacity: .7; }
+.passagem .trator { font-size: 2rem; animation: tratorando 2.5s ease-in-out infinite alternate; }
+@keyframes tratorando { from { transform: translateX(-8px); } to { transform: translateX(8px); } }
+.passagem .infos { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px 16px; font-size: .95rem; }
+.passagem .infos span { display: block; font-size: .72rem; font-weight: 900; opacity: .6; text-transform: uppercase; letter-spacing: 1px; }
+@media (max-width: 520px) {
+  .passagem { flex-direction: column; }
+  .passagem .canhoto { width: auto; border-left: 0; border-top: 3px dashed var(--tinta); flex-direction: row; gap: 12px; padding: 14px; }
+}
+.portao h2 { color: #e0193f; text-shadow: none; margin: 4px 0 10px; }
+.portao p { font-weight: 700; margin-bottom: 10px; }
+.portao .acoes { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 16px; min-height: 64px; }
+.portao .botao { animation: none; }
+#btnNaoSou { transition: left .2s, top .2s, transform .15s; font-size: 1.1rem; padding: 10px 18px; }
+.portao .zoeira { min-height: 1.4em; font-size: .95rem; color: var(--rosa); margin: 10px 0 0; }
+
+/* =========================================================
+   CERTIFICADO
+   ========================================================= */
+.certificado-sec { text-align: center; }
+.certificado-sec p { color: #fff; font-weight: 900; margin-bottom: 18px; text-shadow: 2px 2px 0 var(--tinta); }
+.popup-cert { max-width: 640px; }
+.popup-cert img { width: 100%; border-radius: 8px; border: 2px solid var(--tinta); display: block; margin-bottom: 12px; }
+.popup-cert small { display: block; margin-bottom: 14px; font-weight: 700; }
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .revelar { opacity: 1; transform: none; }
+}
+
+@media (max-width: 520px) {
+  section { margin-top: 56px; }
+  .card { padding: 18px; }
+  .contagem { font-size: .82rem; }
+  .contagem .bloco { min-width: 44px; padding: 2px 6px; }
+}
+</style>
+</head>
+<body class="trancado">
+
+<!-- TELA DE ENTRADA SECRETA (aparece antes do site) -->
+<div class="portao" id="portao">
+  <div class="card">
+    <span class="cadeado" id="cadeado">🔒</span>
+    <h2>ACESSO RESTRITO</h2>
+    <p>Este site contém informações confidenciais sobre uma futura nota 900.</p>
+    <p>Identifique-se: <b>você é a Jovana?</b></p>
+    <div class="acoes">
+      <button class="botao" id="btnSou">Sou eu! 🙋‍♀️</button>
+      <button class="botao rosa" id="btnNaoSou">Não sou</button>
+    </div>
+    <p class="zoeira" id="zoeira"></p>
+  </div>
+</div>
+
+<!-- Canvas onde o confete é desenhado -->
+<canvas id="confete"></canvas>
+
+<!-- Emojis decorativos flutuando no fundo (gerados pelo JavaScript) -->
+<div class="emojis-fundo" id="emojisFundo" aria-hidden="true"></div>
+
+<!-- CONTAGEM REGRESSIVA -->
+<div class="contagem" id="contagem">⏳ Carregando contagem...</div>
+
+<main>
+
+  <!-- ===================== 1. ABERTURA ===================== -->
+  <section class="hero">
+    <span class="selo-fa">⭐ FÃ-CLUBE OFICIAL DA FUTURA AGRÔNOMA 🌱</span>
+    <!-- Clique 5 vezes no título pra ativar o easter egg 😉 -->
+    <h1 class="titulo" id="titulo">
+      JOVANA VAI TIRAR <span class="num" id="numero900">0</span> NO ENEM
+    </h1>
+    <span class="subtitulo">Isso não é uma previsão, é um FATO científico 🔬</span>
+    <a href="#laudo" class="seta" aria-label="Rolar para baixo">👇</a>
+  </section>
+
+  <!-- ===================== 2. RELATÓRIO OFICIAL ===================== -->
+  <section id="laudo" class="revelar">
+    <h2>📋 Relatório Oficial</h2>
+    <div class="card laudo" id="cardLaudo">
+      <div class="laudo-topo">
+        <div class="logo">🔬🧠✨</div>
+        <strong>Instituto de Previsões Jovanísticas</strong>
+        <small>Laudo nº 900/2026 · Documento 100% sério e confiável</small>
+      </div>
+      <div class="laudo-linha"><span>🧠 Nível de inteligência</span><span>Excede a capacidade dos instrumentos</span></div>
+      <div class="laudo-linha"><span>🎯 Probabilidade de tirar 900</span><span>100% (margem de erro: 0)</span></div>
+      <div class="laudo-linha"><span>📈 Risco de o INEP ter que inventar uma nota maior</span><span>ALTO 🚨</span></div>
+      <div class="laudo-linha"><span>☕ Café consumido estudando</span><span>Incalculável (em breve ela vai plantar o próprio ☕🌱)</span></div>
+      <div class="laudo-linha"><span>🚜 Vaga em Agronomia em Machado</span><span>Já reservada. Com plaquinha e tudo.</span></div>
+      <div class="laudo-linha"><span>🐄 Opinião das vacas</span><span>Unânime: aprovada</span></div>
+      <div class="laudo-linha"><span>✍️ Redação</span><span>Corretores já estão chorando de emoção</span></div>
+      <div class="laudo-linha"><span>😎 Nível de brilho</span><span>Recomendado usar óculos escuros</span></div>
+      <div class="laudo-linha"><span>🤔 Dúvidas sobre o resultado</span><span>Nenhuma. Zero. Nada.</span></div>
+      <p class="laudo-assinatura">Assinado: Giovani, Fã Número 1 e PhD em Jovanologia 🎓</p>
+      <div class="carimbo" id="carimbo">APROVADO</div>
+    </div>
+  </section>
+
+  <!-- ===================== PASSAGEM: AGRONOMIA EM MACHADO ===================== -->
+  <section class="revelar">
+    <h2>🎫 Passagem Só de Ida</h2>
+    <div class="card passagem">
+      <div class="corpo">
+        <div class="topo">🌱 EXPRESSO AGRONOMIA · CLASSE EXECUTIVA</div>
+        <div class="rota">
+          <div><strong>ENEM</strong><small>Ponto de partida</small></div>
+          <span class="trator">🚜💨</span>
+          <div><strong>MACHADO-MG</strong><small>Agronomia ☕🌽</small></div>
+        </div>
+        <div class="infos">
+          <div><span>Passageira</span>Jovana</div>
+          <div><span>Assento</span>900 (janela)</div>
+          <div><span>Bagagem</span>Muito conhecimento e uma muda de café</div>
+          <div><span>Status</span>✅ Embarque confirmado</div>
+        </div>
+      </div>
+      <div class="canhoto">
+        <b>900</b>
+        <div>Futura engenheira agrônoma 👩‍🌾</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. GALERIA ===================== -->
+  <section class="revelar">
+    <h2>📸 Galeria da Futura Aprovada</h2>
+    <!-- As fotos são criadas pelo JavaScript a partir da lista FOTOS (lá embaixo, no <script>) -->
+    <div class="galeria" id="galeria"></div>
+  </section>
+
+  <!-- ===================== 4. SIMULADOR DE NOTA ===================== -->
+  <section class="revelar">
+    <h2>🧮 Simulador de Nota Oficial</h2>
+    <div class="card simulador">
+      <p style="font-weight:700">Tecnologia de ponta. Precisão absoluta. Resultado garantido.</p>
+      <div class="barra" id="barra"><div class="barra-recheio" id="barraRecheio"></div></div>
+      <p class="msg-carregando" id="msgCarregando"></p>
+      <div class="resultado" id="resultado"></div>
+      <p class="comentario" id="comentario"></p>
+      <button class="botao" id="btnSimular">Calcular minha nota no ENEM 🎯</button>
+    </div>
+  </section>
+
+  <!-- ===================== 5. KIT DE SOBREVIVÊNCIA ===================== -->
+  <section class="revelar">
+    <h2>🎒 Kit de Sobrevivência do ENEM</h2>
+    <div class="kit">
+      <div class="card dica"><span class="ico">🖊️</span><h3>Caneta preta transparente</h3><p>Leve uma. E uma reserva. E uma reserva da reserva. E uma pra emprestar pra quem esqueceu.</p></div>
+      <div class="card dica"><span class="ico">🪪</span><h3>Documento com foto</h3><p>Original e com foto! Sem ele não entra, nem com nota 900 garantida.</p></div>
+      <div class="card dica"><span class="ico">⏰</span><h3>Chegue cedo</h3><p>Os portões fecham pontualmente. O fiscal não aceita "mas eu ia tirar 900".</p></div>
+      <div class="card dica"><span class="ico">🍫</span><h3>Água e lanche</h3><p>Cérebro de 900 pontos precisa de combustível. Chocolate conta como estratégia.</p></div>
+      <div class="card dica"><span class="ico">🧘‍♀️</span><h3>Respira</h3><p>Você estudou pra isso. Inspira confiança, expira o nervoso.</p></div>
+      <div class="card dica"><span class="ico">🎲</span><h3>Chute com convicção</h3><p>Não sabe? Marca com a confiança de quem sabe. A letra sente medo.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. BOTÃO DO NERVOSO ===================== -->
+  <section class="nervoso revelar">
+    <h2>😰 Bateu o nervoso?</h2>
+    <button class="botao rosa" id="btnNervoso">Clica aqui se bater nervoso 🆘</button>
+  </section>
+
+  <!-- ===================== 7. MENSAGEM FINAL ===================== -->
+  <section class="revelar">
+    <h2>💌 Agora falando sério</h2>
+    <div class="card final" id="cardFinal">
+      <span class="coracao">💖</span>
+      <div id="textoFinal">
+      <!-- Troque/edite o texto abaixo se quiser deixar ainda mais pessoal -->
+      <p>Jovana, brincadeiras à parte: a gente se conhece faz pouco tempo, mas <b>pouco tempo já foi suficiente pra eu ter certeza de que você é uma pessoa rara.</b></p>
+      <p>Tem gente que a gente conhece e esquece, e tem gente que chega e já faz diferença. Você é do segundo tipo. Esse jeito, essa energia, essa cabeça boa... quem tem isso não precisa de prova nenhuma pra provar que é incrível.</p>
+      <p>Então, <b>independente da nota, eu já tenho orgulho de você</b> só por estar indo lá encarar isso. Uma prova não mede quem você é. Ela só vai confirmar o que eu já sei (que é 900, obviamente 😌).</p>
+      <p>E Agronomia em Machado que se prepare: tá chegando uma futura engenheira agrônoma de respeito 👩‍🌾🌱</p>
+      <p>Eu tô muito feliz de poder torcer por você logo nesse começo. Que venham muitos outros motivos pra comemorar juntos! 🥳</p>
+      </div>
+      <p class="tchau">Boa sorte, Jovana! 🍀<small>(Mas você nem precisa)</small></p>
+      <button class="botao" id="btnChuva">Soltar chuva de sorte 🍀⭐</button>
+    </div>
+  </section>
+
+  <!-- ===================== 8. CERTIFICADO ===================== -->
+  <section class="certificado-sec revelar">
+    <h2>🏅 Documento Oficial</h2>
+    <p>Pra guardar, postar e esfregar na cara do INEP 😎</p>
+    <button class="botao rosa" id="btnCertificado">Emitir meu certificado de 900 📜</button>
+  </section>
+
+</main>
+
+<footer>Feito com ❤️ e zero dúvidas sobre o seu 900</footer>
+
+<!-- Popup do nervoso -->
+<div class="popup-fundo" id="popupFundo" role="dialog" aria-modal="true" aria-labelledby="fraseNervoso">
+  <div class="card popup">
+    <div class="grande" id="emojiNervoso">💪</div>
+    <p class="frase" id="fraseNervoso"></p>
+    <div class="acoes">
+      <button class="botao" id="btnOutraFrase">Mais uma 🔁</button>
+      <button class="botao rosa" id="btnFecharPopup">Tô calma ✅</button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup do certificado -->
+<div class="popup-fundo" id="popupCert" role="dialog" aria-modal="true" aria-label="Certificado">
+  <div class="card popup popup-cert">
+    <img id="imgCert" alt="Certificado oficial de aprovação antecipada da Jovana">
+    <small>📱 No celular: segure o dedo na imagem pra salvar</small>
+    <div class="acoes">
+      <a class="botao" id="baixarCert" download="certificado-jovana-900.png" style="text-decoration:none">Baixar ⬇️</a>
+      <button class="botao rosa" id="fecharCert">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Aviso do easter egg -->
+<div class="aviso-1000" id="aviso1000">✨ MODO 1000 ATIVADO ✨</div>
+
+<script>
+/* =========================================================
+   ⚙️ CONFIGURAÇÕES FÁCEIS DE MUDAR
+   ========================================================= */
+
+// 📅 DATA DA PROVA (horário de Brasília: -03:00). Formato: "AAAA-MM-DDTHH:MM:SS-03:00"
+// 13:30 é o horário em que os portões fecham. Confira a data oficial no site do INEP!
+const DATA_PROVA = "2026-11-15T13:30:00-03:00";
+
+// 📸 FOTOS E LEGENDAS DA GALERIA
+// Pra trocar uma foto: coloque o arquivo na mesma pasta deste index.html
+// e mude o nome em "arquivo". Pra trocar a legenda, mude o texto em "legenda".
+// Se o arquivo não existir (ex.: foto5.jpg e foto6.jpg), aparece um quadro
+// "CONFIDENCIAL" no lugar — então é só salvar as fotos com esses nomes depois.
+// Dica: fotos grandes deixam o site lento no celular. Use fotos de no máximo ~700px.
+const FOTOS = [
+  { arquivo: "foto1.jpg", legenda: "Cara de quem já sabe o gabarito 😏" },
+  { arquivo: "foto2.jpg", legenda: "Já treinando pra lidar com o gado em Machado 🐄" },
+  { arquivo: "foto3.jpg", legenda: "Comemorando o 900 com antecedência 🎉" },
+  { arquivo: "foto4.jpg", legenda: "Mostrando a língua pra questão 47 😛" },
+  { arquivo: "foto5.jpg", legenda: "Jovana pensando na redação nota 1000 ✍️" },
+  { arquivo: "foto6.jpg", legenda: "Momento exato em que ela entendeu matemática 🤯" },
+];
+
+// 🆘 FRASES DO BOTÃO DO NERVOSO (pode adicionar quantas quiser)
+const FRASES_NERVOSO = [
+  "Você é mais forte que a questão 47 💪",
+  "Calma, a redação tem medo de você ✍️",
+  "Lembra: 900 é o mínimo 😎",
+  "O gabarito já está torcendo por você 📝",
+  "Respira. Você estudou. Você sabe. Você é a Jovana. 🌟",
+  "Se a questão é difícil, imagina como ela tá com medo de você 👀",
+  "Até o INEP tá nervoso com o que você vai fazer 🚨",
+  "Nervoso é só o seu cérebro carregando a nota 900 ⏳",
+  "Bebe uma água. Volta. Destrói. 💧",
+  "Matemática? Você já venceu coisa pior. Tipo segunda-feira. 📐",
+  "O fã-clube inteiro tá gritando seu nome agora 📣",
+  "Lembra que eu tenho CERTEZA. E eu nunca erro. 🔬",
+  "Cada questão é uma sementinha. Daqui a pouco é colheita em Machado 🌱",
+  "As vacas de Machado estão contando com você 🐄",
+];
+const EMOJIS_NERVOSO = ["💪", "🦸‍♀️", "🔥", "🌟", "😎", "🧠", "🚀", "👑"];
+
+// 🎰 MENSAGENS DO SIMULADOR
+const MSGS_CARREGANDO = [
+  "Consultando os astros... 🔮",
+  "Hackeando o INEP... 💻",
+  "Pedindo opinião pra mãe dela... 👩",
+  "Calculando quantos cafés ela tomou... ☕",
+  "Analisando o brilho no olhar... ✨",
+  "Conferindo com os cientistas da NASA... 🚀",
+  "Perguntando pro horóscopo... ♈",
+  "Contando as canetas reserva... 🖊️",
+  "Consultando os cafezais de Machado... ☕",
+  "Perguntando pras vacas (elas confirmaram) 🐄",
+  "Ligando o trator da aprovação... 🚜",
+];
+
+/* =========================================================
+   🎊 MOTOR DE CONFETE (desenha papéis coloridos e emojis num canvas)
+   ========================================================= */
+const canvas = document.getElementById("confete");
+const ctx = canvas.getContext("2d");
+let particulas = [];
+let animando = false;
+const MAX_PARTICULAS = 260;                          // limite pra não pesar
+const FATOR = innerWidth < 600 ? 0.55 : 1;           // celular: menos confete
+
+function ajustarCanvas() {
+  // Confete não precisa de alta resolução: resolução 1x é bem mais leve no celular
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+}
+
+// Desenhar emoji com fillText a cada quadro é lento. Então cada emoji é
+// desenhado UMA vez numa imagem pequena e depois só copiado (bem mais rápido).
+const cacheEmoji = {};
+function imagemEmoji(emoji) {
+  if (!cacheEmoji[emoji]) {
+    const c = document.createElement("canvas");
+    c.width = c.height = 48;
+    const g = c.getContext("2d");
+    g.font = "38px serif"; g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillText(emoji, 24, 27);
+    cacheEmoji[emoji] = c;
+  }
+  return cacheEmoji[emoji];
+}
+function quantas(qtd) {
+  return Math.max(0, Math.min(Math.round(qtd * FATOR), MAX_PARTICULAS - particulas.length));
+}
+ajustarCanvas();
+addEventListener("resize", ajustarCanvas);
+
+function coresAtuais() {
+  // No modo 1000, o confete também fica dourado
+  return document.body.classList.contains("modo-1000")
+    ? ["#ffd700", "#f5b700", "#fff3b0", "#e6b422", "#ffffff"]
+    : ["#ffd23f", "#ff4fa3", "#7b2ff7", "#2fb8ff", "#3ddc84", "#ffffff"];
+}
+
+// Explosão a partir de um ponto (x, y)
+function explosao(x, y, qtd = 120) {
+  const cores = coresAtuais();
+  qtd = quantas(qtd);
+  for (let i = 0; i < qtd; i++) {
+    const ang = Math.random() * Math.PI * 2;
+    const vel = 4 + Math.random() * 9;
+    particulas.push({
+      x, y, vx: Math.cos(ang) * vel, vy: Math.sin(ang) * vel - 5,
+      w: 6 + Math.random() * 6, h: 8 + Math.random() * 8,
+      cor: cores[(Math.random() * cores.length) | 0],
+      rot: Math.random() * 360, vrot: (Math.random() - .5) * 18, vida: 1, emoji: null,
+    });
+  }
+  iniciarAnimacao();
+}
+
+// Chuva caindo do topo (papel colorido ou emojis)
+function chuva(qtd = 150, emojis = null) {
+  const cores = coresAtuais();
+  qtd = quantas(qtd);
+  for (let i = 0; i < qtd; i++) {
+    particulas.push({
+      x: Math.random() * innerWidth, y: -20 - Math.random() * innerHeight * .8,
+      vx: (Math.random() - .5) * 2, vy: 2 + Math.random() * 3,
+      w: 6 + Math.random() * 6, h: 8 + Math.random() * 8,
+      cor: cores[(Math.random() * cores.length) | 0],
+      rot: Math.random() * 360, vrot: (Math.random() - .5) * 10, vida: 1,
+      emoji: emojis ? emojis[(Math.random() * emojis.length) | 0] : null,
+      tam: 22 + Math.random() * 20,
+    });
+  }
+  iniciarAnimacao();
+}
+
+function iniciarAnimacao() {
+  if (!animando) { animando = true; requestAnimationFrame(desenhar); }
+}
+
+function desenhar() {
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  particulas = particulas.filter(p => p.y < innerHeight + 60 && p.vida > 0);
+  for (const p of particulas) {
+    p.vy += p.emoji ? 0.04 : 0.18;   // gravidade
+    p.vx *= 0.99;
+    p.x += p.vx + Math.sin(p.y / 40) * 0.6;  // balancinho
+    p.y += p.vy;
+    p.rot += p.vrot;
+    if (p.vy > 6) p.vy = 6;          // velocidade máxima de queda
+    // setTransform é mais barato que save/translate/rotate/restore
+    const r = p.rot * Math.PI / 180, cos = Math.cos(r), sin = Math.sin(r);
+    ctx.setTransform(cos, sin, -sin, cos, p.x, p.y);
+    if (p.emoji) {
+      ctx.drawImage(imagemEmoji(p.emoji), -p.tam / 2, -p.tam / 2, p.tam, p.tam);
+    } else {
+      ctx.fillStyle = p.cor;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.rot / 20)));
+    }
+  }
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  if (particulas.length) requestAnimationFrame(desenhar);
+  else { animando = false; ctx.clearRect(0, 0, innerWidth, innerHeight); }
+}
+
+/* =========================================================
+   🎈 EMOJIS FLUTUANDO NO FUNDO
+   ========================================================= */
+(function () {
+  const emojis = ["📚", "🌱", "⭐", "🍀", "🚜", "💯", "☕", "🌽", "✨", "🐄"];
+  const box = document.getElementById("emojisFundo");
+  const total = innerWidth < 600 ? 7 : 10;   // menos emojis no celular
+  for (let i = 0; i < total; i++) {
+    const s = document.createElement("span");
+    s.textContent = emojis[i % emojis.length];
+    s.style.left = Math.random() * 95 + "%";
+    s.style.top = Math.random() * 95 + "%";
+    s.style.animationDelay = -Math.random() * 9 + "s";
+    s.style.fontSize = 1.4 + Math.random() * 1.8 + "rem";
+    box.appendChild(s);
+  }
+})();
+
+/* =========================================================
+   ⏳ CONTAGEM REGRESSIVA
+   ========================================================= */
+const elContagem = document.getElementById("contagem");
+const alvo = new Date(DATA_PROVA).getTime();
+
+function atualizarContagem() {
+  const falta = alvo - Date.now();
+  if (falta <= 0) {
+    // Depois do horário: até 6h depois é "dia de prova", depois disso é "missão cumprida"
+    elContagem.innerHTML = falta > -6 * 3600e3
+      ? "🚀 É HOJE! VAI COM TUDO, JOVANA! 900 TE ESPERA! 🚀"
+      : "✅ Prova feita! Agora é só esperar o 900 chegar 😎";
+    return;
+  }
+  const d = Math.floor(falta / 864e5);
+  const h = Math.floor(falta / 36e5) % 24;
+  const m = Math.floor(falta / 6e4) % 60;
+  const s = Math.floor(falta / 1e3) % 60;
+  const dois = n => String(n).padStart(2, "0");
+  elContagem.innerHTML = `⏳ Faltam pro 900:<span class="blocos">
+    <span class="bloco">${d}d</span><span class="bloco">${dois(h)}h</span>
+    <span class="bloco">${dois(m)}m</span><span class="bloco">${dois(s)}s</span></span>`;
+}
+atualizarContagem();
+setInterval(atualizarContagem, 1000);
+
+/* =========================================================
+   💯 CONTADOR DO 900 NA ABERTURA (0 → 900)
+   ========================================================= */
+const elNumero = document.getElementById("numero900");
+let notaDoTitulo = 900;
+
+function contarAte(final, duracao = 2200) {
+  const inicio = performance.now();
+  const de = parseInt(elNumero.textContent) || 0;
+  function passo(agora) {
+    const t = Math.min((agora - inicio) / duracao, 1);
+    const suave = 1 - Math.pow(1 - t, 3);   // desacelera no final
+    elNumero.textContent = Math.round(de + (final - de) * suave);
+    if (t < 1) requestAnimationFrame(passo);
+  }
+  requestAnimationFrame(passo);
+}
+
+// A festa da abertura só começa quando ela passa pela tela secreta
+function comecarFesta() {
+  contarAte(900);
+  chuva(180);                                       // confete caindo na abertura
+  setTimeout(() => explosao(innerWidth / 2, innerHeight / 3, 140), 2200); // explode quando chega no 900
+}
+
+/* =========================================================
+   🔒 TELA DE ENTRADA SECRETA
+   ========================================================= */
+const portao = document.getElementById("portao");
+const btnNaoSou = document.getElementById("btnNaoSou");
+const zoeira = document.getElementById("zoeira");
+const FUGAS = ["Certeza? 🤨", "Mentira 👀", "Volta aqui não 😂", "Desiste 🙃", "Só a Jovana chega aqui"];
+let fugas = 0;
+
+function abrirPortao() {
+  const cadeado = document.getElementById("cadeado");
+  cadeado.textContent = "🔓";
+  cadeado.classList.add("abriu");
+  zoeira.textContent = "Identidade confirmada. Bem-vinda, futura nota 900 ✨";
+  setTimeout(() => {
+    portao.classList.add("abrindo");
+    document.body.classList.remove("trancado");
+    comecarFesta();
+    setTimeout(() => portao.remove(), 700);
+  }, 900);
+}
+document.getElementById("btnSou").addEventListener("click", abrirPortao);
+
+// O botão "Não sou" foge do mouse/dedo
+function fugir(e) {
+  if (e) e.preventDefault();
+  const largura = btnNaoSou.offsetWidth, altura = btnNaoSou.offsetHeight;
+  // tira o botão de dentro do card (que flutua) pra ele poder correr pela tela toda
+  if (btnNaoSou.parentElement !== portao) portao.appendChild(btnNaoSou);
+  btnNaoSou.style.position = "fixed";
+  btnNaoSou.style.zIndex = "2";
+  btnNaoSou.style.left = Math.random() * (innerWidth - largura - 20) + 10 + "px";
+  btnNaoSou.style.top = Math.random() * (innerHeight - altura - 20) + 10 + "px";
+  btnNaoSou.textContent = FUGAS[fugas % FUGAS.length];
+  fugas++;
+}
+btnNaoSou.addEventListener("mouseenter", fugir);
+btnNaoSou.addEventListener("touchstart", fugir, { passive: false });
+// Se mesmo assim conseguir clicar (ex.: pelo teclado), entra do mesmo jeito 😏
+btnNaoSou.addEventListener("click", () => {
+  zoeira.textContent = "Mentira, só a Jovana teria coragem de abrir isso 😏";
+  setTimeout(abrirPortao, 900);
+});
+
+/* =========================================================
+   🥚 EASTER EGG: 5 cliques no título = MODO 1000
+   ========================================================= */
+const elTitulo = document.getElementById("titulo");
+let cliquesTitulo = 0, timerCliques;
+
+elTitulo.addEventListener("click", () => {
+  cliquesTitulo++;
+  elTitulo.classList.remove("tremeu"); void elTitulo.offsetWidth; elTitulo.classList.add("tremeu");
+  clearTimeout(timerCliques);
+  timerCliques = setTimeout(() => (cliquesTitulo = 0), 2500); // zera se demorar muito
+  if (cliquesTitulo >= 5) {
+    cliquesTitulo = 0;
+    const ativar = !document.body.classList.contains("modo-1000");
+    document.body.classList.toggle("modo-1000", ativar);
+    notaDoTitulo = ativar ? 1000 : 900;
+    contarAte(notaDoTitulo, 1200);
+    const aviso = document.getElementById("aviso1000");
+    aviso.textContent = ativar ? "✨ MODO 1000 ATIVADO ✨" : "MODO 900 (modesto) 😌";
+    aviso.classList.remove("show"); void aviso.offsetWidth; aviso.classList.add("show");
+    if (ativar) { chuva(200, ["✨", "🏆", "👑", "💛"]); explosao(innerWidth / 2, innerHeight / 2, 200); }
+  }
+});
+
+/* =========================================================
+   👀 REVELAR SEÇÕES AO ROLAR + CARIMBO "APROVADO"
+   ========================================================= */
+const observador = new IntersectionObserver(entradas => {
+  for (const e of entradas) {
+    if (!e.isIntersecting) continue;
+    e.target.classList.add("visivel");
+    observador.unobserve(e.target);
+    if (e.target.id === "laudo") {
+      // espera o laudo aparecer e aí "bate" o carimbo
+      setTimeout(() => {
+        document.getElementById("carimbo").classList.add("bateu");
+        setTimeout(() => document.getElementById("cardLaudo").classList.add("sacudiu"), 250);
+      }, 900);
+    }
+  }
+}, { threshold: 0.25 });
+document.querySelectorAll(".revelar").forEach(el => observador.observe(el));
+
+/* =========================================================
+   📸 MONTA A GALERIA
+   ========================================================= */
+const galeria = document.getElementById("galeria");
+const giros = ["-4deg", "3deg", "-2deg", "4deg", "-3deg", "2deg"];
+
+FOTOS.forEach((foto, i) => {
+  const card = document.createElement("figure");
+  card.className = "polaroid";
+  card.tabIndex = 0;
+  card.style.setProperty("--giro", giros[i % giros.length]);
+
+  const moldura = document.createElement("div");
+  moldura.className = "moldura";
+  const img = document.createElement("img");
+  img.src = foto.arquivo;
+  img.alt = foto.legenda;
+  img.loading = "lazy";
+  // Se a foto não existir, mostra um quadro "confidencial" no lugar
+  img.onerror = () => {
+    moldura.innerHTML = '<div class="sem-foto"><b>🕵️‍♀️</b>FOTO CONFIDENCIAL<br><small>Arquivo secreto do fã-clube</small></div>';
+  };
+  moldura.appendChild(img);
+
+  const legenda = document.createElement("p");
+  legenda.textContent = foto.legenda;
+
+  card.append(moldura, legenda);
+  // No celular: tocar endireita e aumenta a foto (tocar de novo volta)
+  card.addEventListener("click", () => {
+    const jaAtiva = card.classList.contains("ativa");
+    galeria.querySelectorAll(".polaroid.ativa").forEach(c => c.classList.remove("ativa"));
+    if (!jaAtiva) card.classList.add("ativa");
+  });
+  galeria.appendChild(card);
+});
+
+/* =========================================================
+   🧮 SIMULADOR DE NOTA
+   ========================================================= */
+const btnSimular = document.getElementById("btnSimular");
+const barra = document.getElementById("barra");
+const recheio = document.getElementById("barraRecheio");
+const msg = document.getElementById("msgCarregando");
+const resultado = document.getElementById("resultado");
+const comentario = document.getElementById("comentario");
+let tentativas = 0;
+
+// Cada clique dá uma nota maior. Depois do último, sempre dá ERRO.
+const NOTAS = [
+  { nota: () => 900 + Math.floor(Math.random() * 40), txt: "Como previsto pelo Instituto. Zero surpresas. 🔬" },
+  { nota: () => 950, txt: "Calculamos de novo... e SUBIU?! 😳" },
+  { nota: () => 980, txt: "O sistema está suando frio 🥵" },
+  { nota: () => 1000, txt: "Nota máxima. Agronomia em Machado já estendeu o tapete verde 🌱🚜" },
+  { nota: () => "ERRO: NOTA ALTA DEMAIS", txt: "O simulador não aguentou tanta Jovana. Reinicie o universo. 💥", erro: true },
+];
+
+btnSimular.addEventListener("click", () => {
+  btnSimular.disabled = true;
+  resultado.textContent = ""; comentario.textContent = "";
+  resultado.className = "resultado";
+  barra.classList.add("on");
+  recheio.style.width = "0%";
+
+  // embaralha e pega 4 mensagens engraçadas
+  const msgs = [...MSGS_CARREGANDO].sort(() => Math.random() - .5).slice(0, 4);
+  let progresso = 0, etapa = 0;
+  msg.textContent = msgs[0];
+
+  const intervalo = setInterval(() => {
+    progresso += 4 + Math.random() * 6;
+    if (progresso > 100) progresso = 100;
+    recheio.style.width = progresso + "%";
+    const novaEtapa = Math.min(Math.floor(progresso / 25), msgs.length - 1);
+    if (novaEtapa !== etapa) { etapa = novaEtapa; msg.textContent = msgs[etapa]; }
+
+    if (progresso >= 100) {
+      clearInterval(intervalo);
+      setTimeout(() => {
+        const item = NOTAS[Math.min(tentativas, NOTAS.length - 1)];
+        tentativas++;
+        barra.classList.remove("on");
+        msg.textContent = "Resultado oficial:";
+        resultado.textContent = item.nota();
+        resultado.className = "resultado pop" + (item.erro ? " erro" : "");
+        comentario.textContent = item.txt;
+        btnSimular.textContent = item.erro ? "Tentar quebrar de novo 💥" : "Calcular de novo (vai que sobe) 🔁";
+        btnSimular.disabled = false;
+        // explosão de confete saindo do resultado
+        const r = resultado.getBoundingClientRect();
+        explosao(r.left + r.width / 2, r.top + r.height / 2, item.erro ? 250 : 150);
+      }, 300);
+    }
+  }, 160);
+});
+
+/* =========================================================
+   🆘 POPUP DO NERVOSO
+   ========================================================= */
+const popupFundo = document.getElementById("popupFundo");
+const elFrase = document.getElementById("fraseNervoso");
+const elEmojiN = document.getElementById("emojiNervoso");
+let ultimaFrase = -1;
+
+function novaFrase() {
+  let i;
+  do { i = Math.floor(Math.random() * FRASES_NERVOSO.length); } while (i === ultimaFrase && FRASES_NERVOSO.length > 1);
+  ultimaFrase = i;
+  elFrase.textContent = FRASES_NERVOSO[i];
+  elEmojiN.textContent = EMOJIS_NERVOSO[Math.floor(Math.random() * EMOJIS_NERVOSO.length)];
+}
+function abrirPopup() { novaFrase(); popupFundo.classList.add("aberto"); document.getElementById("btnOutraFrase").focus(); }
+function fecharPopup() { popupFundo.classList.remove("aberto"); document.getElementById("btnNervoso").focus(); }
+
+document.getElementById("btnNervoso").addEventListener("click", abrirPopup);
+document.getElementById("btnOutraFrase").addEventListener("click", novaFrase);
+document.getElementById("btnFecharPopup").addEventListener("click", () => {
+  fecharPopup();
+  chuva(60, ["💖", "✨"]);
+});
+popupFundo.addEventListener("click", e => { if (e.target === popupFundo) fecharPopup(); });
+addEventListener("keydown", e => { if (e.key === "Escape" && popupFundo.classList.contains("aberto")) fecharPopup(); });
+
+/* =========================================================
+   🍀 CHUVA DE SORTE (mensagem final)
+   ========================================================= */
+document.getElementById("btnChuva").addEventListener("click", () => {
+  chuva(160, ["🍀", "⭐", "🍀", "⭐", "🌱", "✨"]);
+});
+
+/* =========================================================
+   📜 CERTIFICADO (desenhado num canvas e transformado em imagem)
+   ========================================================= */
+async function gerarCertificado() {
+  try { await document.fonts.load("60px Bangers"); await document.fonts.load("900 30px Nunito"); } catch (e) {}
+  const W = 1200, H = 850;
+  const c = document.createElement("canvas");
+  c.width = W; c.height = H;
+  const g = c.getContext("2d");
+  const dourado = document.body.classList.contains("modo-1000");
+  const nota = dourado ? "1000" : "900";
+
+  // Fundo e bordas coloridas
+  const grad = g.createLinearGradient(0, 0, W, H);
+  (dourado ? ["#b8860b", "#ffd700", "#b8860b"] : ["#ff4fa3", "#7b2ff7", "#2fb8ff"])
+    .forEach((cor, i, arr) => grad.addColorStop(i / (arr.length - 1), cor));
+  g.fillStyle = grad; g.fillRect(0, 0, W, H);
+  g.fillStyle = "#fffdf6"; g.fillRect(40, 40, W - 80, H - 80);
+  g.strokeStyle = "#2a1450"; g.lineWidth = 4; g.strokeRect(60, 60, W - 120, H - 120);
+  g.setLineDash([10, 8]); g.strokeRect(75, 75, W - 150, H - 150); g.setLineDash([]);
+
+  g.textAlign = "center"; g.fillStyle = "#2a1450";
+  g.font = "900 26px Nunito, sans-serif";
+  g.fillText("INSTITUTO DE PREVISÕES JOVANÍSTICAS 🔬", W / 2, 140);
+  g.font = "72px Bangers, cursive";
+  g.fillStyle = dourado ? "#b8860b" : "#7b2ff7";
+  g.fillText("CERTIFICADO DE APROVAÇÃO ANTECIPADA", W / 2, 230);
+
+  g.fillStyle = "#2a1450"; g.font = "700 30px Nunito, sans-serif";
+  g.fillText("Certificamos, com 100% de certeza científica, que", W / 2, 295);
+  g.font = "120px Bangers, cursive"; g.fillStyle = "#ff4fa3";
+  g.fillText("JOVANA", W / 2, 405);
+  g.fillStyle = "#2a1450"; g.font = "700 30px Nunito, sans-serif";
+  g.fillText("está oficialmente destinada a tirar", W / 2, 460);
+  g.font = "130px Bangers, cursive"; g.fillStyle = dourado ? "#b8860b" : "#7b2ff7";
+  g.fillText(nota + " NO ENEM", W / 2, 585);
+
+  g.font = "900 26px Nunito, sans-serif"; g.fillStyle = "#2f8f3a";
+  g.fillText("🌱 Destino: AGRONOMIA em Machado-MG 🚜", W / 2, 635);
+  g.font = "700 20px Nunito, sans-serif"; g.fillStyle = "#2a1450";
+  g.fillText("Margem de erro: 0  ·  Dúvidas: nenhuma  ·  Opinião das vacas: favorável", W / 2, 670);
+
+  // Assinatura (com linha por cima, estilo documento oficial)
+  g.strokeStyle = "#2a1450"; g.lineWidth = 2;
+  g.beginPath(); g.moveTo(120, 700); g.lineTo(460, 700); g.stroke();
+  g.textAlign = "left"; g.font = "40px Bangers, cursive";
+  g.fillText("Giovani", 130, 738);
+  g.font = "700 18px Nunito, sans-serif";
+  g.fillText("Fã Número 1 · PhD em Jovanologia 🎓", 130, 762);
+
+  // Carimbo (a caixa se ajusta ao tamanho da palavra pra não cortar)
+  g.save(); g.translate(W - 260, 710); g.rotate(-0.2);
+  g.strokeStyle = "#e0193f"; g.fillStyle = "#e0193f"; g.lineWidth = 6;
+  g.font = "56px Bangers, cursive"; g.textAlign = "center"; g.textBaseline = "middle";
+  const largCarimbo = g.measureText("APROVADO").width + 40;
+  g.strokeRect(-largCarimbo / 2, -38, largCarimbo, 76);
+  g.fillText("APROVADO", 0, 3);
+  g.restore();
+
+  const url = c.toDataURL("image/png");
+  document.getElementById("imgCert").src = url;
+  document.getElementById("baixarCert").href = url;
+  document.getElementById("popupCert").classList.add("aberto");
+  explosao(innerWidth / 2, innerHeight / 2, 160);
+}
+document.getElementById("btnCertificado").addEventListener("click", gerarCertificado);
+document.getElementById("fecharCert").addEventListener("click", () => document.getElementById("popupCert").classList.remove("aberto"));
+document.getElementById("popupCert").addEventListener("click", e => { if (e.target.id === "popupCert") e.target.classList.remove("aberto"); });
+</script>
+</body>
+</html>
