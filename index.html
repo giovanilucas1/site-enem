@@ -308,7 +308,7 @@ h2 {
 }
 .popup-fundo.aberto .popup { transform: scale(1) rotate(0); }
 .popup .grande { font-size: 3.2rem; }
-.popup .frase { font-family: 'Bangers', cursive; letter-spacing: 1.5px; font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 10px 0 20px; line-height: 1.15; }
+.popup .frase { font-weight: 900; font-size: clamp(1.15rem, 4.5vw, 1.45rem); margin: 10px 0 22px; line-height: 1.4; }
 .popup .acoes { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 .popup .botao { font-size: 1.2rem; padding: 10px 20px; animation: none; }
 
@@ -623,22 +623,32 @@ const FOTOS = [
 
 // 🆘 FRASES DO BOTÃO DO NERVOSO (pode adicionar quantas quiser)
 const FRASES_NERVOSO = [
+  // 💛 Motivação de verdade
+  "Você não chegou até aqui por sorte. Chegou porque se esforçou. Confia nisso.",
+  "O nervoso é só sinal de que isso importa pra você. E importa porque você se dedicou.",
+  "Você sabe mais do que imagina. Seu cérebro guardou tudo, é só confiar nele.",
+  "Não precisa acertar tudo. Precisa fazer o seu melhor, e isso você já sabe fazer.",
+  "Uma questão difícil não define a prova inteira. Pula, respira e volta nela depois.",
+  "Respira fundo: inspira contando até 4, segura 4, solta em 4. Pronto. Agora volta e arrasa.",
+  "Lê com calma. Muitas vezes a resposta tá escondida no próprio enunciado.",
+  "Lembra de quantas coisas difíceis você já superou. Essa prova é só mais uma delas.",
+  "Errar uma questão não é o fim. É só uma questão. A próxima é sua.",
+  "Você é capaz. Não porque eu tô dizendo, mas porque você já provou isso várias vezes.",
+  "Vai no seu ritmo. Você não tá competindo com quem tá do lado, só com a prova.",
+  "A redação é a sua voz. Escreve com a confiança de quem tem algo importante a dizer.",
+  "Você plantou muito até aqui. Agora é só colher. 🌾",
+  "Cada questão respondida é um passo a mais rumo a Agronomia em Machado. 🚜",
+  "Seja qual for o resultado, você já é motivo de orgulho. De verdade.",
+  "Bebe uma água, alonga o pescoço, solta os ombros. Você treinou pra isso.",
+  "Coragem não é não sentir medo. É fazer mesmo com ele. E você tá fazendo.",
+  "Daqui a alguns anos você vai lembrar desse dia como o começo de algo muito bom.",
+  // 😂 Algumas engraçadas, pra dar uma relaxada
   "Você é mais forte que a questão 47 💪",
   "Calma, a redação tem medo de você ✍️",
   "Lembra: 900 é o mínimo 😎",
-  "O gabarito já está torcendo por você 📝",
-  "Respira. Você estudou. Você sabe. Você é a Jovana. 🌟",
-  "Se a questão é difícil, imagina como ela tá com medo de você 👀",
-  "Até o INEP tá nervoso com o que você vai fazer 🚨",
-  "Nervoso é só o seu cérebro carregando a nota 900 ⏳",
-  "Bebe uma água. Volta. Destrói. 💧",
-  "Matemática? Você já venceu coisa pior. Tipo segunda-feira. 📐",
-  "O fã-clube inteiro tá gritando seu nome agora 📣",
-  "Lembra que eu tenho CERTEZA. E eu nunca erro. 🔬",
-  "Cada questão é uma sementinha. Daqui a pouco é colheita em Machado 🌱",
   "As vacas de Machado estão contando com você 🐄",
 ];
-const EMOJIS_NERVOSO = ["💪", "🦸‍♀️", "🔥", "🌟", "😎", "🧠", "🚀", "👑"];
+const EMOJIS_NERVOSO = ["💪", "🌟", "🌱", "💛", "🧠", "🍀", "✨", "🫶", "🌻", "👑"];
 
 // 🎰 MENSAGENS DO SIMULADOR
 const MSGS_CARREGANDO = [
